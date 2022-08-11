@@ -1,0 +1,14 @@
+name ci-cd:
+
+on:
+  push:
+    branches:
+       - master
+jobs:
+   test:
+      name: unit-test
+      runs-on: ubuntu-latest
+      
+      steps:
+        - name: Install
+          run: pip install pytest
